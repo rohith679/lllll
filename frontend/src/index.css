@@ -1,0 +1,33 @@
+/* src/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  FIX FOR SCROLL-TO-TOP ON MOBILE:
+  This forces the browser's default scroll behavior to be instant, 
+  preventing conflicts with React's navigation scroll command.
+*/
+html {
+  scroll-behavior: auto !important;
+}
+
+/* Performance optimization: Reduce animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* GPU acceleration for better performance */
+.animate-scroll {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
