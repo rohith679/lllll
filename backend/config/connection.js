@@ -1,0 +1,28 @@
+module.exports = {
+  dbUrl:
+    process.env.MONGO_URI ||
+    "mongodb+srv://digitner_db_user:XbneYFBw1qFTTj0N@fathima.gkgvfmn.mongodb.net/",
+  backup: {
+    db: {
+      path: "/home/ec2-user/_backup", // chage here based on os E://Clients/Myanmar/MyanPro/_backup
+    },
+  },
+
+  aws: {
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    region: process.env.AWS_REGION,
+    bucket: process.env.AWS_BUCKET,
+    link: process.env.AWS_LINK,
+  },
+
+  emailGateway: {
+    provider: process.env.EMAIL_PROVIDER,
+    server: process.env.EMAIL_SERVER,
+    userName: process.env.EMAIL_USERNAME,
+    password: process.env.EMAIL_PASSWORD,
+    region: process.env.EMAIL_REGION,
+    senderEmail: process.env.EMAIL_SENDER,
+    replyToEmail: process.env.EMAIL_REPLYTO,
+  },
+};
