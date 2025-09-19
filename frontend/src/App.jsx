@@ -26,6 +26,7 @@ import AestheticDermatology from './Pages/Public/ServicesPage/components/Aesthet
 import LaserTreatments from './Pages/Public/ServicesPage/components/LaserTreatments.jsx';
 import HairTreatments from './Pages/Public/ServicesPage/components/HairTreatments.jsx';
 import CustomizedCare from './Pages/Public/ServicesPage/components/CustomizedCare.jsx';
+import SkinBrightening from './Pages/Public/ServicesPage/components/SkinBrightening.jsx';
 import PrivateRoute from './PrivateRoute.jsx';
 import ContactsPage from './Pages/Admin/ContactsPage.jsx';
 import ReviewsPage from './Pages/Admin/ReviewsPage.jsx';
@@ -56,6 +57,7 @@ function App() {
           <Route path="/services/laser-treatments" element={<LaserTreatments />} />
           <Route path="/services/hair-treatments" element={<HairTreatments />} />
           <Route path="/services/customized-care" element={<CustomizedCare />} />
+          <Route path="/services/skin-brightening" element={<SkinBrightening />} />
           <Route path="/skincare" element={<SkincarePage />} />
           <Route path="/admin/login" element={<Login />} />
           {/* <Route path="/admin" element={<PrivateRoute><AdminLayout><Dashboard /></AdminLayout></PrivateRoute>} /> */}

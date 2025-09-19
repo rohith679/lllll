@@ -119,7 +119,12 @@ const TreatmentCard = ({ category, index }) => {
   const navigate = useNavigate();
 
   const handleLearnMore = () => {
-    navigate(`/services/${category.slug}`);
+    // Handle special case for skin brightening
+    if (category.slug === 'skin-brightening') {
+      navigate('/services/skin-brightening');
+    } else {
+      navigate(`/services/${category.slug}`);
+    }
   };
 
   return (
