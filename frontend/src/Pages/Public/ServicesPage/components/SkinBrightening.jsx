@@ -1,9 +1,10 @@
 // src/Pages/Public/ServicesPage/components/SkinBrightening.jsx
 
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaSun, FaGem, FaFlask, FaSparkles } from 'react-icons/fa';
+import { FaSun, FaGem, FaFlask } from 'react-icons/fa';
+import { GiSparkles } from 'react-icons/gi';
 
 const SkinBrightening = () => {
   const treatments = [
@@ -94,27 +95,27 @@ const SkinBrightening = () => {
   ];
 
   const benefits = [
-    {
-      icon: <FaSun />,
-      title: 'Radiant Complexion',
-      description: 'Achieve a natural, healthy glow from within'
-    },
-    {
-      icon: <FaGem />,
-      title: 'Even Skin Tone',
-      description: 'Reduce pigmentation and dark spots effectively'
-    },
-    {
-      icon: <FaFlask />,
-      title: 'Advanced Formulations',
-      description: 'Medical-grade treatments for superior results'
-    },
-    {
-      icon: <FaSparkles />,
-      title: 'Instant Results',
-      description: 'See visible improvement after first session'
-    }
-  ];
+  {
+    icon: <FaSun />,
+    title: 'Radiant Complexion',
+    description: 'Achieve a natural, healthy glow from within'
+  },
+  {
+    icon: <FaGem />,
+    title: 'Even Skin Tone',
+    description: 'Reduce pigmentation and dark spots effectively'
+  },
+  {
+    icon: <FaFlask />,
+    title: 'Advanced Formulations',
+    description: 'Medical-grade treatments for superior results'
+  },
+  {
+    icon: <GiSparkles />,  // Changed from FaSparkles to GiSparkles
+    title: 'Instant Results',
+    description: 'See visible improvement after first session'
+  }
+];
 
   return (
     <div className="min-h-screen bg-white">
